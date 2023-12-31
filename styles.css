@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans";
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-left > img:first-of-type {
+    margin: 1.5rem 1rem 1.5rem 1.5rem;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-right > img {
+    height: 20px;
+    width: 22px;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.sneakers-image > img {
+    height: 100%;
+    width: 100%;
+}
+.sneakers-second {
+    display: none;
+}
+.sneakers-third {
+    display: none;
+}
+.sneakers-fourth {
+    display: none;
+}
+.sneakers-first.off {
+    display: none;
+}
+.sneakers-second.active {
+    display: block;
+}
+.sneakers-third.active {
+    display: block;
+}
+.sneakers-fourth.active {
+    display: block;
+}
+.description-wrapper {
+    padding: 1rem 1.5rem;
+}
+.description > p:first-of-type {
+    text-transform: uppercase;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.description > h1 {
+    font-size: 1.875rem;
+    color: hsl(220, 13%, 13%);
+}
+.description > p:last-of-type {
+    margin: 1rem 0 1.5rem 0;
+    font-size: 1rem;
+    color: hsl(219, 9%, 45%);
+} 
+.price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    display: flex;
+    align-items: center;
+}
+.price > h2 {
+    color: hsl(220, 13%, 13%);
+    font-size: 1.75rem;
+}
+.percentage {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    background-color: hsl(25, 100%, 94%);
+    margin-left: 1rem;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+}
+.price-crossed > h2 {
+    font-size: 1rem;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+.amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+.amount > img {
+    padding: 0 0.5rem;
+}
+.amount > p {
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+}
+.add-to-cart {
+    background-color: hsl(26, 100%, 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(255, 125, 26, 0.25) 0px 54px 55px, rgba(255, 125, 26, 0.12) 0px -12px 30px, rgba(255, 125, 26, 0.12) 0px 4px 6px, rgba(255, 125, 26, 0.17) 0px 12px 13px, rgba(255, 125, 26, 0.09) 0px -3px 5px;
+}
+.add-to-cart > p {
+    margin-left: 1rem;
+    font-weight: 700;
+}
