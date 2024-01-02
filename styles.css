@@ -27,7 +27,71 @@
     width: 22px;
     margin: 1.5rem 1.5rem 1.5rem 0;
 }
+/* nav menu on click */
+.nav-left-menu {
+    display: none;
+}
+.nav-left-menu.active {
+    display: block;
+    position: fixed;
+    background-color: white;
+    width: 65%;
+    height: 100%;
+    box-shadow: 210px 0px 0px 0px rgba(0, 0, 2, 0.7);
+    z-index: 2;
+}
+.nav-left-menu > img {
+    padding: 2rem 1.5rem;
+}
+.nav-left-menu-items > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
 
+/*  */
+/* left and right arrow */
+
+.arrow {
+    width: 13px;
+    height: 18px;
+}
+.arrow-wrapper-wrapper {
+    position: relative;
+    margin: 0 1rem;
+}
+.arrow-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: -13rem;
+    width: 100%;
+    z-index: 1;
+}
+.arrow-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: white;
+}
+.arrow-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+/*  */
 .sneakers-image > img {
     height: 100%;
     width: 100%;
