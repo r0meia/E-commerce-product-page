@@ -42,23 +42,8 @@ function showSlides() {
 
 }
 function showPreviousSlides() {
-    let i;
 
-    let slides = document.getElementsByClassName("sneakers");
-
-    for (i = 0; i < slides.length; i++) {
-
-        slides[i].style.display = "none";
-    }
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    } w droga strone 
-
-    slides[slideIndex - 1].style.display = "block";
-
+    
 }
 arrowLeft.addEventListener("click", (showPreviousSlides));
 arrowRight.addEventListener("click", (showSlides));
