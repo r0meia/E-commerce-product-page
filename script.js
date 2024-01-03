@@ -45,5 +45,5 @@ function showPreviousSlides() {
 
     
 }
-arrowLeft.addEventListener("click", (showPreviousSlides));
+arrowLeft.addEventListener("click", (showSlides));
 arrowRight.addEventListener("click", (showSlides));
