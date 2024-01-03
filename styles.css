@@ -96,27 +96,6 @@
     height: 100%;
     width: 100%;
 }
-.sneakers-second {
-    display: none;
-}
-.sneakers-third {
-    display: none;
-}
-.sneakers-fourth {
-    display: none;
-}
-.sneakers-first.off {
-    display: none;
-}
-.sneakers-second.active {
-    display: block;
-}
-.sneakers-third.active {
-    display: block;
-}
-.sneakers-fourth.active {
-    display: block;
-}
 .description-wrapper {
     padding: 1rem 1.5rem;
 }

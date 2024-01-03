@@ -9,16 +9,56 @@ menuClose.addEventListener("click", () => {
     menuBarsOpen.classList.remove("active");
 });
 
-const arrowLeft = document.querySelector(".arrow-left")
-const arrowRight = document.querySelector(".arrow-right")
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
 
-let sneakersFirst = document.querySelector(".sneakers-first")
-let sneakersSecond = document.querySelector(".sneakers-second")
-let sneakersThird = document.querySelector(".sneakers-third")
-let sneakersFourth = document.querySelector(".sneakers-fourth")
+let sneakersFirst = document.querySelector(".sneakers1");
+let sneakersSecond = document.querySelector(".sneakers2");
+let sneakersThird = document.querySelector(".sneakers3");
+let sneakersFourth = document.querySelector(".sneakers4");
+
+let slideIndex = 0;
+showSlides();
+ 
+function showSlides() {
+    let i;
+ 
+    let slides = document.getElementsByClassName("sneakers");
+ 
+ 
+    for (i = 0; i < slides.length; i++) {
+
+        slides[i].style.display = "none";
+    }
+ 
+    slideIndex++;
+ 
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+ 
+    slides[slideIndex - 1].style.display = "block";
 
 
-arrowLeft.addEventListener("click", () => {
-    sneakersSecond.classList.add("active")
-    sneakersFirst.classList.add("off")
-})
+}
+function showPreviousSlides() {
+    let i;
+
+    let slides = document.getElementsByClassName("sneakers");
+
+    for (i = 0; i < slides.length; i++) {
+
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    } w droga strone 
+
+    slides[slideIndex - 1].style.display = "block";
+
+}
+arrowLeft.addEventListener("click", (showPreviousSlides));
+arrowRight.addEventListener("click", (showSlides));
