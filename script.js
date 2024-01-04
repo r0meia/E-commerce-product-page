@@ -3,12 +3,22 @@ const menuBars = document.querySelector(".menu")
 const menuClose = document.querySelector(".close")
 const menuBarsOpen = document.querySelector(".nav-left-menu")
 
-menuBars.addEventListener("click", () => {
+menuBars.addEventListener("click", (event) => {
     menuBarsOpen.classList.toggle("active");
+    event.stopPropagation();
 });
+
 menuClose.addEventListener("click", () => {
     menuBarsOpen.classList.remove("active");
 });
+document.addEventListener("click", (event) => {
+    const isClickedInsideMenu = menuBars.contains(event.target) || menuBarsOpen.contains(event.target);
+
+    if (!isClickedInsideMenu) {
+        menuBarsOpen.classList.remove("active");
+    }
+});
+
 // 
 // images slider
 const arrowLeft = document.querySelector(".arrow-left");
@@ -83,6 +93,8 @@ const checkout = document.querySelector(".cart-bottom");
 const cartPrice = document.querySelector(".cart-price");
 const multiplier = document.querySelector(".multiplier");
 const finalAmount = document.querySelector(".final-amount");
+const sneakersPrice = document.querySelector(".sneakers-price");
+let navCartAmount = document.querySelector(".nav-amount");
 
 
 cartButton.addEventListener("click", (event) => {
@@ -128,5 +140,27 @@ minus.addEventListener("click", () => {
     subtractNumber(1);
 });
 
+// const addToCart = document.querySelector(".add-to-cart");
+// const bin = document.querySelector(".bin");
+// const checkout = document.querySelector(".cart-bottom");
+// const cartPrice = document.querySelector(".cart-price");
+// const multiplier = document.querySelector(".multiplier");
+// const finalAmount = document.querySelector(".final-amount");
+// const sneakersPrice = document.querySelector(".sneakers-price");
+// const navCartAmount = document.querySelector(".nav-amount");
 
+function addingItemsToCart () {
+    const numberElements = document.getElementsByClassName("number-amount");
+
+    const numberValue = numberElements[0].textContent;
+
+    currentNumber = parseInt(numberValue) + 1;
+
+    const destinationDiv = document.getElementsByClassName("nav-amount");
+    destinationDiv[0].innerHTML = numberValue;
+
+}
+    addToCart.addEventListener("click", () => {
+        addingItemsToCart();
+    })
 

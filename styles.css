@@ -54,6 +54,22 @@
 }
 
 /*  */
+.nav-amount {
+
+}
+.nav-amount {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.625rem;
+    width: 20px;
+    border-radius: 15px;
+    position: relative;
+    left: 1.75rem;
+    bottom: 0.615rem;
+}
 /* left and right arrow */
 
 .arrow {
