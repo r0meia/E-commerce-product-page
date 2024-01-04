@@ -1,3 +1,4 @@
+// left menu 
 const menuBars = document.querySelector(".menu")
 const menuClose = document.querySelector(".close")
 const menuBarsOpen = document.querySelector(".nav-left-menu")
@@ -8,7 +9,8 @@ menuBars.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
     menuBarsOpen.classList.remove("active");
 });
-
+// 
+// images slider
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
@@ -66,13 +68,22 @@ function showPreviousSlides() {
 
 arrowLeft.addEventListener("click", (showPreviousSlides));
 arrowRight.addEventListener("click", (showSlides));
-
+// 
+// cart and amount added to cart
 const cartButton = document.querySelector(".nav-cart");
 const amount = document.querySelector(".number-amount");
 const cartEmpty = document.querySelector(".cart-wrapper-wrapper");
 const minus = document.querySelector(".icon-minus");
 const plus = document.querySelector(".icon-plus");
 let itemsNumber = document.querySelector(".number-amount");
+
+const addToCart = document.querySelector(".add-to-cart");
+const bin = document.querySelector(".bin");
+const checkout = document.querySelector(".cart-bottom");
+const cartPrice = document.querySelector(".cart-price");
+const multiplier = document.querySelector(".multiplier");
+const finalAmount = document.querySelector(".final-amount");
+
 
 cartButton.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -116,4 +127,6 @@ function subtractNumber(numberAmount) {
 minus.addEventListener("click", () => {
     subtractNumber(1);
 });
+
+
 
