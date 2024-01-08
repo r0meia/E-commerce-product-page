@@ -90,7 +90,6 @@ let itemsNumber = document.querySelector(".number-amount");
 const addToCart = document.querySelector(".add-to-cart");
 const bin = document.querySelector(".bin");
 const checkout = document.querySelector(".cart-bottom");
-const cartPrice = document.querySelector(".cart-price");
 const multiplier = document.querySelector(".multiplier");
 const finalAmount = document.querySelector(".final-amount");
 const sneakersPrice = document.querySelector(".sneakers-price");
@@ -140,14 +139,6 @@ minus.addEventListener("click", () => {
     subtractNumber(1);
 });
 
-// const addToCart = document.querySelector(".add-to-cart");
-// const bin = document.querySelector(".bin");
-// const checkout = document.querySelector(".cart-bottom");
-// const cartPrice = document.querySelector(".cart-price");
-// const multiplier = document.querySelector(".multiplier");
-// const finalAmount = document.querySelector(".final-amount");
-// const sneakersPrice = document.querySelector(".sneakers-price");
-// const navCartAmount = document.querySelector(".nav-amount");
 
 function addingItemsToCart () {
     const numberElements = document.getElementsByClassName("number-amount");
@@ -160,7 +151,44 @@ function addingItemsToCart () {
     destinationDiv[0].innerHTML = numberValue;
 
 }
+function zeroItems (itemsNumber) {
+    if(itemsNumber > 0) {
+        navCartAmount.classList.add("active");
+    }
+}
     addToCart.addEventListener("click", () => {
         addingItemsToCart();
-    })
+        zeroItems(currentNumber);
+    });
+
+    // const cartButton = document.querySelector(".nav-cart");
+    // const amount = document.querySelector(".number-amount");
+    // const cartEmpty = document.querySelector(".cart-wrapper-wrapper");
+    // const minus = document.querySelector(".icon-minus");
+    // const plus = document.querySelector(".icon-plus");
+    // let itemsNumber = document.querySelector(".number-amount");
+    
+    // const addToCart = document.querySelector(".add-to-cart");
+    // const bin = document.querySelector(".bin");
+    // const checkout = document.querySelector(".cart-bottom");
+    // const actualPrice = document.querySelector(".actual-price-copy");
+    // const multiplier = document.querySelector(".multiplier");
+    // const finalAmount = document.querySelector(".final-amount");
+    // const sneakersPrice = document.querySelector(".sneakers-price");
+    // let navCartAmount = document.querySelector(".nav-amount");
+
+    let actualPriceCopy = document.querySelector(".actual-price-copy");
+function priceCopy () {
+    let actualPrice = document.querySelector(".actual-price");
+    let actualPriceValue = actualPrice.textContent;
+    let currentPrice = parseInt(actualPriceValue);
+    actualPriceCopy.textContent = currentPrice;
+}
+addToCart.addEventListener("click", () => {
+    priceCopy();
+})
+
+
+
+
 

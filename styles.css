@@ -55,9 +55,9 @@
 
 /*  */
 .nav-amount {
-
+    display: none;
 }
-.nav-amount {
+.nav-amount.active {
     display: flex;
     justify-content: center;
     background-color: hsl(26, 100%, 55%);
